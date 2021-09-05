@@ -1,0 +1,67 @@
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Geneva, sans-serif;
+  background-color: #fcfcfc;
+}
+a {
+  color: #2772b0;
+}
+.wrapper {
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fcfcfc;
+}
+
+div img {
+  width: 100%;
+  max-width: 225px;
+}
+
+/* grid system -- mobile first! */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+[class*="col-"] {
+  margin-left: 4%;
+  flex: 0 0 92%;
+  box-shadow: 2px 2px 2px rgb(238, 238, 238);
+  margin-bottom: 4%;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) {
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    flex: 0 0 20%;
+  }
+  .col-2 {
+    flex: 0 0 44%;
+  }
+  .col-3 {
+    flex: 0 0 68%;
+  }
+  .col-4 {
+    flex: 0 0 92%;
+  }
+}
